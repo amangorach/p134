@@ -12,7 +12,7 @@ def home():
     return render_template('index.html')
 
 # write a route for post request
-@app.route('/' , methods = ["POST"])
+@app.route('/predict_emotion' , methods = ["POST"])
 def review():
 
     # extract the customer_review by writing the appropriate 'key' from the JSON data
