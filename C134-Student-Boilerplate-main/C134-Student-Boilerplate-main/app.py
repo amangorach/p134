@@ -3,7 +3,7 @@ from flask import Flask , render_template , request , jsonify
 
 # importing sentiment_analysis file as sa
 import sentiment_analysis as sa
-
+display_date = ;
 app = Flask(__name__)
 
 # app route for index page
