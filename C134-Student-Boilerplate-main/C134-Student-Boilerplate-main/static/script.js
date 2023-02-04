@@ -1,9 +1,10 @@
 $(document).ready(function(){
-
+    
     console.log('Ready')
 
     //  Fetch the current date and update it in the DOM
-    $("#display_date").html(display_date)
+    let display_date = "date:" + date.toLocaleDateString()
+    $("#date").html(display_date)
 
 
 
@@ -40,7 +41,7 @@ $(document).ready(function(){
                 predicted_emotion = result.data.predicted_emotion
                 emo_url = result.data.predicted_emotion_img_url
                 //  update the DOM elements
-                $("#prediction").html(predicted_emotion)
+                $("#sentiment").html(predicted_emotion)
                 $("#predicted").css("display", "block")
                 
                 //  show them
