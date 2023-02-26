@@ -32,9 +32,9 @@ def predict():
         sentiment,emoji_url = sa.predict(review)
         response = jsonify({'status':'Success',
                             'prediction':sentiment,
-                            'url':emohi_url})
+                            'url':emoji_url})
 
-        _ , _ = sa.predict(review)
+
 
         return response
 
