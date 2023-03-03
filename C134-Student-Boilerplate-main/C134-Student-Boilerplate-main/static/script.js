@@ -3,9 +3,9 @@ $(document).ready(function(){
     console.log('Ready')
 
     //  Fetch the current date and update it in the DOM
-    let display_date = "date:" + date.toLocaleDateString(new Date())
-    $("#date").html(display_date)
-
+    let date_time = new Date() 
+    let current_date = date_time.toLocaleDateString()
+    $('#date').text("Date : " + current_date)
 
 
     //  write an event, when Submit button is clicked
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
             //  Data to be sent in JSON format
             data : JSON.stringify(input_data),
-
+            url: "/predict"
             //  type of response expected is json
             dataType : 'json',
 
